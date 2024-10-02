@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/templates/css/updateuser.css">
+    <title>Update user</title>
+  
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+<script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<body style="height: 650px;">
+    <div class="container" style="overflow-x:auto; height:90vh;">
+        <form id="formValidation" method="POST">
+            <h1>Update Form</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>
+                            <label for="userid">User Id</label>
+                        </th>
+                        <td>
+                            <input type="text" class="userid" name="userid" id="uid" placeholder="Enter your id" required disabled>
+                        </td>  
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="name">First Name </label>
+                        </th>
+                        <td>
+                            <input type="text"  name="firstname" id="ufirstname" placeholder="Enter the first name" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="lastname">Last Name </label>
+                        </th>
+                        <td>
+                            <input type="text" name="lastname" id="ulastname" placeholder="Enter the last name" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="mail">Email </label>
+                        </th>
+                        <td>
+                            <input type="text" id="uemail" name="email" placeholder="Enter the mail" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="phone">Mobile number</label>
+                        </th>
+                        <td>
+                            <input type="tel" name="phonenumber" id="uphonenumber" placeholder="Enter the mobile number"required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <input type="submit" class="submit" value="Update" >  
+                        </th>
+                    </tr>
+    
+                </tbody>
+            </table>
+            <div>
+                <h3 class="errmsg" style="color: red; text-align: center;"></h3> 
+                <h3 class="message"style="color:green; text-align: center;"></h3>
+             </div>
+        </form>
+    </div>
+    <script src="/templates/js/updateScript.js"></script>
+</body>
+</html>

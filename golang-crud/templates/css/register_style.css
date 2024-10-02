@@ -1,0 +1,68 @@
+body{
+    background-image: url(/templates/css/hadi-yazdi-aznaveh-UD_0cezQUfQ-unsplash.jpg);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: 20px;
+   display:flex;         
+          align-items: center;
+          justify-content: center;
+    }
+    
+    .container{
+        color: rgb(241, 240, 240);
+        margin-top: 5vh;
+        background-color: rgba(0, 0, 0, 0.342);
+        height:auto;
+        width: 41%;
+        border-radius: 5%;
+        box-shadow: 2px 2px 2px 3px     rgb(8, 160, 147);
+          
+    }   
+h1{
+    text-align: center;
+}
+label   {
+    margin-left: 20px;
+    padding: 10px;
+}
+table{
+    width: 100%;
+}
+th{
+    text-align: start;
+}
+  
+input{
+        margin-left: 10px;
+        margin-top: 5px;
+        padding: 10px;
+        width: 80%;
+        font-size: 20px;
+        border-radius: 15px;
+    }
+    .signin{
+        margin: 2vh 3%;
+    }
+
+    a{
+        text-decoration: none;
+        color:aqua;
+    }
+
+    a:hover{
+        color: rgb(32, 240, 77);
+    }
+.submit:hover,.reset:hover   {
+    background-color: rgb(1, 75, 71);
+    color:white;
+     
+    }
+   .submit{
+    margin: 20px 40px 1px 70px;
+   }
+    .reset{    
+        width: 60%;
+        margin: 20px 40px 1px 40px;
+    }
+
+    
+   

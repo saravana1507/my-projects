@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/templates/js/fulluserscript.js"></script>
+    <link rel="stylesheet" href="/templates/css/fulluser.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+
+    <title>fulldetails</title>
+</head>
+<body>
+    <div class="container" style="overflow-x:auto;">
+        <h1>Users Details</h1>
+        <table>
+            <thead class="userheader">
+                <tr>
+                    <th>UserId</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Phonenumber</th>
+                </tr>
+
+            </thead>
+            <tbody class="userpage">
+              
+            </tbody>
+           
+        </table>
+        <div>
+            <h3 class="error">{{.Error}}</h3>
+        </div>
+        <form action="home" method="get">
+            <div class="backcontainer">
+                <input type="submit" value="Back" class="back">
+            </div>
+        </form>
+    </div>
+  <script src="/templates/js/fulluserscript.js"></script>
+</body>
+</html>

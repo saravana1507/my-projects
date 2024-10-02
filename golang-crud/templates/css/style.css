@@ -1,0 +1,86 @@
+body {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;  
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.342);
+    color: rgb(241, 240, 240);
+    margin-top: 15vh;
+    border-color: aliceblue;
+    box-shadow: 2px 5px 5px 2px whitesmoke;
+    height: auto;
+    width: 500px;
+    border-radius: 5%;
+    box-shadow: 2px 2px 2px 3px     rgb(8, 160, 147);
+}
+
+
+h1 {
+    padding-top: 5vh;
+    text-align: center;
+    color: antiquewhite;
+}
+
+h3 {
+    color: red;
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+input {
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.submit {
+    margin-left: 3vw;
+    margin-top: 30px;
+    width: 40%;
+}
+
+.bottomcontainer {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5vh;
+}
+
+a {
+   font-size: 20px;
+    text-decoration: none;
+        color: aqua;
+}
+
+a:hover {
+    color: rgb(32, 240, 77);
+}
+
+.submit:hover {
+    background-color: rgb(1, 75, 71);
+    color: white;
+}
+
+.error{
+    color: red;
+}
+.noerror{
+    color:green;
+}
+
+.nameError,.passwordError{
+    display: none;
+}
+.passwordIcon{ 
+    padding:2px;
+    margin-top: 13px;
+    position: absolute;
+ } 

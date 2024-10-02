@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/templates/css/user.css">
+    <title>user detail</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+<script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<body>
+    <div class="container">
+        <form id="formValidation">
+        <h1>User Details</h1>
+        <div class="searchcontainer">
+            <div class="searchid">
+                <label for="">User Id :</label>
+                <div style="display: inline;">
+                    <input type="text" name="userid" id="userid" required>
+                </div>
+               
+            </div>
+            <div>
+                <input type="submit" value="Search" class="submit">
+            </div>
+            <div class="edit">
+                <span class="editimage"><img src="/templates/image/pencil-square.svg" alt=""></span>
+                <a  style="margin-left: 10px;" href="updatepage">Edit</a>
+            </div>
+        </div>
+       <div class="showdetails" style="overflow-x:auto;">
+        <table>
+            <thead class="userheader">
+                <tr>
+                    <th>UserId</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Phonenumber</th>
+                </tr>
+            </thead>
+            <tbody id="userbody"> 
+                <td id="id"></td>
+                <td id="firstname"></td>
+                <td id="lastname"></td>
+                <td id="email"></td>
+                <td id="phonenumber"></td>
+            </tbody>
+        </table>
+        <div>
+            <h3 id="errormsg" style="color: red ; text-align: center;"></h3>
+        </div>
+       </div>
+    </form>
+ 
+    </div>
+    <script src="/templates/js/useridScript.js"></script>
+</body>
+</html>

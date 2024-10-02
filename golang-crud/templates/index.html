@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+ 
+ 
+    <link rel="stylesheet" href="/templates/css/style.css">
+    <style>
+        body{
+            background-image: url(/templates/css/hadi-yazdi-aznaveh-UD_0cezQUfQ-unsplash.jpg);
+        }
+        .passwordIcon{ 
+        padding:2px;
+        margin-top: 13px;
+        position: absolute;
+        right:36vw !important;
+     } 
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+<script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<body>
+    <div class="container">
+        <div class="logincontainer">
+            <form id="formValidation" method="POST" action="/loginpage">
+                <h1>LOGIN PAGE</h1>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <Label for ="user"> Username</Label>
+                            </th>
+                            <td>
+                                <input type="text" name="firstname" id="firstname" placeholder="Enter your Username" required>
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="password">Password</label>
+                            </th>
+                            <td>
+                                <input type="password" name="password" id="loginpassword" placeholder="Enter your Password" required>
+                            
+                            </td>
+                            <td class="passwordIcon" style="right: 20px;"> 
+                                <span id="loginpasswordicon" onclick="iconButton('loginpassword')">
+                                   <img src="/templates/image/eye.svg" alt="" height="auto" width="20px" style="margin-top: 4px;" /> </span>
+                           </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                <input type="submit" value="Login" class="submit" >
+                            </th>
+                            
+                        </tr>
+                    </tbody>
+                   
+                </table>
+                <div>
+                    <h3 class="errmsg"></h3>
+                    <h3 class="noerror"></h3>
+                </div>
+            </form>
+
+                <div class="bottomcontainer">
+                    <div>
+                        <a href="">Forget Password?</a>
+                    </div>
+                    <div>
+                        <a href="./register">Sign-Up?</a>
+                    </div>
+                </div>   
+        </div>
+
+        
+    </div>
+    <script src="/templates/js/script.js"></script>
+
+</body>
+</html>

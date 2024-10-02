@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Add font and icon links -->
+
+
+
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="shortcut icon" href="./image/poorvikalogo.png" type="image/x-icon">
+    <title>Poorvika</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-light sticky-top">
+        <div class="container-fluid">
+
+            <a class="head-image text-decoration-none fs-7 ms-5 " href="#home">Poorvika</a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel ">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Poorvika</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body justify-content-center">
+                    <ul class="navbar-nav justify-content-end me-0 pe-1">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link mx-lg-3" aria-current="page" href="#iphone">Iphone</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link mx-lg-3" href="#android">Android</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link mx-lg-3" href="#google">Google</a>
+                        </li>
+
+                        <li class="nav-item mx-2">
+                            <a class="nav-link mx-lg-3" href="#contact">Contact</a>
+                        </li>
+
+                </div>
+            </div>
+            <div class="  d-flex justify-content-end "style="cursor:pointer;">
+
+                <div id="cart-container" class="me-5 mt-1" onclick="add_cart_open_function()">
+                    <div id="cart">
+                        <span id="cart_icon"></span>
+                    </div>
+                    <span id="itemCount" for="cart_icon"></span>
+                </div>
+
+                <div class="dropdown me-5 mt-1  navbarlogindownpage">
+                    <a href="" id="loginNavbar" class="" data-bs-toggle="modal" data-bs-target="#loginmodal">
+                        <span id="loginicon">Login</span> </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item" href="" id="profileDrop" data-bs-toggle="modal"
+                                data-bs-target="#profileModal"><img src="./image/dropdown/person-fill.svg" alt=""
+                                    height="auto" width="25px" class="mb-1 ms-2 "> Profile </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pastcart_Modal" ><img src="./image/dropdown/cart-fill.svg" alt=""
+                                    height="auto" width="25px" class="mb-1 ms-2 " > Past Order</a></li>
+                        <div class="btn-group dropstart w-100 navbarloginSidepage">
+                            <li class="w-100">
+                                <a href="" class="dropdown-item " data-bs-toggle="dropdown" aria-expanded="false"><img
+                                        src="./image/dropdown/gear-fill.svg" alt="" height="auto" width="25px"
+                                        class="mb-1 ms-2 "> Setting</a>
+
+                                <ul class="dropdown-menu navbarlogin_Sidepageview">
+                                    <li><a class="dropdown-item " href="" data-bs-toggle="modal"
+                                            data-bs-target="#changePasswordModal"><img
+                                                src="./image/dropdown/key-fill.svg" alt="" height="auto" width="25px"
+                                                class="mb-1 ms-2 "> Change Password</a></li>
+                                    <li><a class="dropdown-item " href="" data-bs-toggle="modal"
+                                            data-bs-target="#helplineModal"><img
+                                                src="./image/dropdown/question-circle-fill.svg" alt="" height="auto"
+                                                width="25px" class="mb-1 ms-2 "> Help & Support</a></li>
+
+                                </ul>
+                            </li>
+                        </div>
+
+
+                        <li><a class="dropdown-item " href="" onclick="logout()"><img
+                                    src="./image/dropdown/box-arrow-left.svg " alt="" height="auto" width="25px"
+                                    class="mb-1 ms-2 "> Logout</a></li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler pe-4" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- slider image -->
+        <section id="home">
+            <div class="slideimage">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner mt-10">
+                        <div class="carousel-item active">
+                            <img class=" img-fluid rounded d-block  " src="./image/slidebar image/iphoneslde.jpg"
+                                alt="apple" height="10%">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid rounded d-block " src="./image/slidebar image/oneplus.jpg"
+                                alt="android" height="100vh">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid rounded d-block" src="./image/slidebar image/ggoogleslde.jpg"
+                                alt="google" height="100vh">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--iphone  -->
+        <section id="iphone">
+            <div class="phone mx-4">
+                <h1 class="text-center mt-5 mb-5">IPHONE</h1>
+                <div class="row ">
+                    <div class="col-12 col-md-6 col-lg-4 mt-3">
+                        <div class="card h-80 w-100">
+                            <img src="./image/iphone/iphone15.jpeg" class="card-img-top img-fluid rounded"
+                                alt="iphone15">
+                            <div class="card-body text-center">
+                                <h5 class="card-title" id="">Apple Iphone 15</h5>
+                                <p class="card-text">Rs.<span id="iphone15_price"
+                                        class="text-body me-2">130000</span><span
+                                        class="old text-muted mx-2">Rs.150000</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary mx-2" id="addcart_iphone15"
+                                    onclick="addCart_function ('Apple Iphone 15',130000)" value="Apple iphone 15" >Add-Cart</button>
+                                    <button type="button" class="btn btn-outline-primary mx-2" data-bs-toggle="modal"
+                                        data-bs-target="#iphone15">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mt-3 ">
+                        <div class="card h-80">
+                            <img src="./image/iphone/iphone11.jpeg" class="card-img-top img-fluid rounded" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Apple Iphone 11</h5>
+                                <p class="card-text">Rs.<span id="iphone11_price" class="text-body mx-2">80000</span><span
+                                        class="old text-muted mx-2">Rs.110000</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary mx-2"id="addcart_iphone11" name="Apple Iphone 11"
+                                     onclick="addCart_function ('Apple Iphone 11',80000)" value="Iphone11_total">Add-Cart</button>
+                                    <button type="button" class="btn btn-outline-primary mx-2" data-bs-toggle="modal"
+                                        data-bs-target="#iphone11" >Details</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mt-3">
+                        <div class="card h-80">
+                            <img src="./image/iphone/iphone13.jpeg" class="card-img-top img-fluid rounded" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Apple Iphone 13</h5>
+                                <p class="card-text">Rs.<span class="text-body mx-2">110000</span><span
+                                        class="old text-muted mx-2">Rs.150000</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button"class="btn btn-outline-primary mx-2" id="iphone13_price" 
+                                    onclick="addCart_function('Apple Iphone 13',110000)" >Add-Cart</button>
+                                    <button type="button" class="btn btn-outline-primary mx-2" data-bs-toggle="modal"
+                                        data-bs-target="#iphone13" >Details</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- android -->
+        <section id="android">
+            <div class="phone  mx-4">
+                <h1 class="text-center my-5 mb-5">ANDROID</h1>
+                <div class="row ">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-80">
+                            <img src="./image/android/mi13.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Redmi 13c</h5>
+                                <p class="card-text"><span class="text-body mx-2">Rs.26000</span><span
+                                        class="old text-muted mx-2">Rs.40000</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary mx-2 "  onclick="addCart_function('Redmi 13c',26000 ,'redmi13c_count','redmi13_total')">Add-Cart</button>
+                                    <button type="button" class="btn btn-outline-primary mx-2 " data-bs-toggle="modal"
+                                        data-bs-target="#redmi">Details</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-80">
+                            <img src="./image/android/Samsung .jpeg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Samsung A54</h5>
+                                <p class="card-text"><span class="text-body mx-2">Rs.54000</span><span
+                                        class="old text-muted mx-2">Rs.70000</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary mx-2" onclick="addCart_function('Samsung A54',54000 ,'samsungA54_count','samsung54_total')">Add-cart</button>
+                                    <button type="button" class="btn btn-outline-primary mx-2" data-bs-toggle="modal"
+                                        data-bs-target="#samsung">Details</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-80">
+                            <img src="./image/android/one.jpeg" class="card-img-top " alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Oneplus 11</h5>
+                                <p class="card-text"><span class="text-body mx-2">Rs.34000</span><span
+                                        class="old text-muted mx-2">Rs.43000</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary  mx-2"onclick="addCart_function('Oneplus 11',34000 ,'oneplus_11_count','oneplus_11_total')">Add-Cart</button>
+                                    <button type="button" class="btn btn-outline-primary  mx-2" data-bs-toggle="modal"
+                                        data-bs-target="#oneplus">Details</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- google -->
+
+        <section id="google">
+            <div class="phone mx-4">
+                <h1 class="text-center mb-5 my-5">GOOGLE</h1>
+                <div class="row ">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-80">
+                            <img src="./image/google/google pixel6.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Google Pixel 6</h5>
+                                <p class="card-text"><span class="text-body mx-2">Rs.45000</span><span
+                                        class="old text-muted mx-2">Rs.70000</span></p>
+                            </div>
+                            <div class="card-footer" style="border: none;">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary  mx-2" onclick="addCart_function('Google Pixel 6',45000 ,'googlepixel6_count','googlepixel6_total')">Add-Cart</button>
+                                    <button type="button" class="btn btn-outline-primary mx-2" data-bs-toggle="modal"
+                                        data-bs-target="#googlepixel6">Details</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-80">
+                            <img src="./image/google/google pixel7.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Google Pixel 8</h5>
+                                <p class="card-text"><span class="text-body mx-2">Rs.93000</span><span
+                                        class="old text-muted mx-2">Rs.110000</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary  mx-2"onclick="addCart_function('Google Pixel 8',93000 ,'googlepixel8_count','googlepixel8_total')">Add-Cart</button>
+                                    <button type="button" class="btn btn-outline-primary  mx-2" data-bs-toggle="modal"
+                                        data-bs-target="#googlepixel8">Details</button>
+
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-80">
+                            <img src="./image/google/google pixel8.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Google pixel 7</h5>
+                                <p class="card-text"><span class="text-body mx-2">Rs.70000</span><span
+                                        class="old text-muted mx-2">Rs.90000</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-center"> 
+                                    <button type="button" class="btn btn-outline-primary  mx-2" onclick="addCart_function('Google Pixel 7',70000 ,'googlepixel7_count','googlepixel7_total')">Add-Cart</button>
+                                    <button type="button" class="btn btn-outline-primary mx-2" data-bs-toggle="modal"
+                                        data-bs-target="#googlepixel7">Details</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <section id="contact">
+        <footer class="footer bg-light">
+
+            <div class="container">
+                <div class="row ms-5">
+
+                    <div class="col-md-6 col-lg-4 ps-4">
+                        <h5 class="text-start">Contact Us</h5>
+                        <ul class="list-unstyled text-start">
+                            <li>Email: poorvika@gmail.com</li>
+                            <li>Phone: +91 9128181245</li>
+                            <li>Address: 232,Velachery,<br>Chennai-600042</li>
+                        </ul>
+                        <h5 class="mt-2">Follow Us</h5>
+                        <ul class="list-inline footer-links mt-3">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-4 ps-4">
+                        <h5 class="">About Us</h5>
+                        <p class="pe-4 me-5 text-start">
+                            Poorvika is the Largest Tech Retailer in India,spanning across 460+ showrooms in
+                            and around Tamil Nadu, Karnataka, Pondicherry, Mumbai, Pune and Trivandrum.
+                            Poorvika sells a wide category of devices in its showrooms and Online
+                            portal, ranging from the Best Smartphones.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 ps-4">
+                        <h5 class="text-start"> Contact Form</h5>
+                        <form action="" class="text-start">
+                            <div class="form-group d-flex  justify-content-center" style="width:80%">
+                                <label for="contact name" class="me-3">Name</label>
+                                <input type="text" name="" class="form-control w-70" id="contact name">
+                            </div>
+                            <div class="form-group d-flex  justify-content-center mt-2" style="width:80%">
+                                <label for="contact mail" class="me-3">Mail</label>
+                                <input type="mail" name="" class="form-control  ms-2" id="contact mail">
+                            </div>
+                            <div class="form-group  mt-2 " style="width:80%">
+                                <label for="contact name">Message</label>
+                                <textarea name="" id="footeraddress" class="form-control" cols="24" rows="3"></textarea>
+                            </div>
+                            <div class="form-group mt-2 w-50">
+                                <button class="btn btn-outline-primary mx-2 ">Send</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <hr>
+                <div class="row ms-5">
+                    <div class="col-md-6">
+                        <p>© 2024 Your Website. All rights reserved.</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+    <!-- login modals -->
+
+    <div class="modal" id="loginmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <h1 class="modal-title ms-4" style="  width: 80%;text-align:center;" id="loginLabel">
+                        Login Page</h1>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <h5 for="username" class="username">User Name</h5>
+                                        </th>
+                                        <td>
+                                            <input type="text" class="form-control p-2 " id="username"
+                                                placeholder="Enter the name" maxlength="20">
+                                                <div>
+                                                    <label for="error" class="error" id="login_nameError"></label>
+                                                </div>  
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="userPassword" class="userPassword">Password</h5>
+                                        </th>
+                                        <td>
+                                            <input type="password" name="userPassword"
+                                                class="passwordAccess form-control p-2" id="userpassword"
+                                                placeholder="Enter the password" maxlength="13">
+                                                <div>
+                                                    <label for="error" class="error" id="login_passwordError"></label>
+                                                </div> 
+                                        </td>
+                                        <td class="passwordIcon d-flex justify-content-center p-0">
+                                            <span id="userpasswordIcon" onclick="passwordIconButton('userpassword')"> <img
+                                                    src="./image/eye.svg" alt="" height="auto" width="20px"
+                                                    style="margin-top: 4px;" /> </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="form-group  d-flex justify-content-center mt-2">
+                            <input type="button" class="btn btn-outline-primary p-2 mx-2" id="loginButton" value="Login"
+                                onclick="loginbutton()" style="width: 20%;" />
+                            <button type="reset" class="btn btn-outline-primary p-2 mx-2" style="width: 20%;"> Reset
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-between" style="border: none;">
+                    <div>
+                        <label for="">Don't have account?</label>
+                        <a href="" class="text-decoration-none " data-bs-toggle="modal" data-bs-target="#signupmodal">
+                            Sign-up
+                            here</a>
+
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none" data-bs-toggle="modal"
+                            data-bs-target="#changePasswordModal">Forget
+                            Password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sign up  modal-->
+
+    <div class="modal" id="signupmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="signupLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header " style="border:none;">
+                    <h2 class="modal-title ms-3 " style="  width: 80%;text-align:center;" id="forgetLabel">
+
+                        Welcome To Poorvika</h3>
+                        <button type="button" class="btn-close me-3" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-block ">
+                    <form class="signup" action="" method="">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <h5 for="signupName">User Name</label>
+                                        </th>
+                                        <td>
+                                            <input type="text" name="name" class="form-control" id="signupName"
+                                                placeholder="Enter the name" maxlength="20">
+                                            <div>
+                                                <label for="error" class="error" id="nameError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="signupMail">Email</h5>
+                                        </th>
+                                        <td>
+                                            <input type="email" name="name" class="form-control" id="signupMail"
+                                                placeholder="Enter the Email">
+                                            <div>
+                                                <label for="error" class="error" id="mailError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="signupPassword"> Password</h5>
+                                        </th>
+                                        <td>
+                                            <div id=" passwordbuttonBorder">
+                                                <input type="password" name="password"
+                                                    class="passwordAccess form-control w-70" id="signupPassword"
+                                                    placeholder="Enter the password" maxlength="13">
+                                            </div>
+
+                                            <div>
+                                                <label for="error" class="error" id="passwordError"></label>
+                                            </div>
+                                        </td>
+                                        <td class="passwordIcon d-flex justify-content-center p-0">
+                                            <span id="signupPasswordIcon" onclick="passwordIconButton('signupPassword')">
+                                                <img src="./image/eye.svg" alt="" height="auto" width="20px"
+                                                    style="margin-top: 4px;" /> </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="signupRepassword">Confirm Password</h5>
+                                        </th>
+                                        <td>
+                                            <input type="password" name="repassword" class="passwordAccess form-control"
+                                                id="signupRepassword" placeholder="Re-enter the password"
+                                                maxlength="13">
+                                            <div>
+                                                <label for="error" class="error" id="reEnterPasswordError"></label>
+                                            </div>
+                                        </td>
+                                        <td class="passwordIcon d-flex justify-content-center p-0">
+                                            <span id="signupRepasswordIcon" onclick="passwordIconButton('signupRepassword')">
+                                                <img src="./image/eye.svg" alt="" height="auto" width="20px"
+                                                    style="margin-top: 4px;" /> </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="signupNumber">Mobile Number</h5>
+                                        </th>
+                                        <td>
+                                            <input type="tel" name="number" id="signupNumber" class="form-control"
+                                                placeholder="Enter the mobile number" maxlength="10">
+                                            <div>
+                                                <label for="error" class="error" id="mobileNumberError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="signupAddress">Address</h5>
+                                        </th>
+                                        <td>
+                                            <textarea name="address" class="form-control" id="signupAddress"
+                                                placeholder="Enter the address" maxlength="150"></textarea>
+                                            <div>
+                                                <label for="error" class="error" id="addressError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="signupGenter" class="gender me-2">Gender</h5>
+                                        </th>
+                                        <td>
+                                            <input type="radio" name="gender" id="SignupMale" value="male">
+                                            <label for="SignupMale" class=" genter me-2 ">Male</label>
+                                            <input type="radio" name="gender" id="SignupFemale" value="female">
+                                            <label for="SignupFemale" class=" genter me-2 ">Female</label>
+                                            <div>
+                                                <label for="error" class="error" id="genderError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="mobilechoice">Mobile Choice</h5>
+                                        </th>
+                                        <td>
+                                            <input type="checkbox" name="choice" id="signupIphonechoice" value="Iphone">
+                                            <label for="signupIphonechoice" class="checkbox me-2 ">Iphone</label>
+                                            <input type="checkbox" name="choice" id="signupAndroidchoice"
+                                                value="Android">
+                                            <label for="signupAndroidchoice" class="checkbox me-2">Android</label>
+                                            <input type="checkbox" name="choice" id="signupGooglechoice" value="Google">
+                                            <label for="signupGooglechoice" class="checkbox me-2 ">Google</label>
+                                            <div>
+                                                <label for="error" class="error" id="choiceError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="branch">Branch</h5>
+                                        </th>
+                                        <td>
+                                            <select name="branch" id="signup_branch" class="form-control">
+                                                <option value="branch" id="" selected disabled hidden>Select option
+                                                </option>
+                                                <option value="branch" id="velachery" value="velachery">Velachery
+                                                </option>
+                                                <option value="branch" id="egmore" value="egmore">Egmore</option>
+                                                <option value="branch" id="tambaram" value="tambaram">Tambaram</option>
+                                            </select>
+                                            <div>
+                                                <label for="error" class="error" id="branchError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <h6 id="signupfield_error">* All fields are mandatory</h6>
+                        <div class="mt-2 d-flex justify-content-center">
+                            <button type="reset" class="btn btn-outline-primary p-2 mx-4"
+                                style="width: 30%;">Reset</button>
+                            <input type="button" class="btn btn-outline-primary  p-2 mx-4" id="signupuButton"
+                                style="width: 30%;" onclick="signupButton()" value="Sign-up">
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-start ms-1" style="border: none;">
+                    <div>
+                        <label for="">Already-User?</label>
+                        <a href="" class=" text-decoration-none" data-bs-target="#loginmodal"
+                            data-bs-toggle="modal">Sign-In
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- profile  modal-->
+
+    <div class="modal" id="profileModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="profileModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header " style="border:none;">
+                    <h2 class="modal-title ms-4" style="  width: 80%;text-align:center;"> User Profile</h1>
+                        <button type="button" class="btn-close me-3" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-block pt-0 mt-2 ">
+                    <form class="" action="" method="">
+                        <div class="table-responsive ">
+                            <table class="table table-borderless mb-1">
+                                <tbody>
+                                    <tr class="">
+                                        <td class="d-flex justify-content-center">
+                                            <img src="./image/dropdown/person-circle.svg" alt="" height="auto" width="60px">
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="profileName"> Name</label>
+                                        </th>
+                                        <td>
+                                            <span id="profileName"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="profileMail">Email</h5>
+                                        </th>
+                                        <td>
+                                            <span id="profileMail"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="profileMail">Mobile Number </h5>
+                                        </th>
+                                        <td>
+                                            <span id="profileMobileNumber"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="profileAddress">Address</h5>
+                                        </th>
+                                        <td>
+                                            <span id="profileAddress"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="profileGender" class="gender">Gender</h5>
+                                        </th>
+                                        <td>
+                                            <span id="profileGender"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="profileMobilechoice">Mobile Choice</h5>
+                                        </th>
+                                        <td>
+                                            <span id="profileMobilechoice"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="profileBranch">Branch</h5>
+                                        </th>
+                                        <td>
+                                            <span id="profileBranch"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-center" style="border: none;">
+                    <div>
+                        <input type="button" class="btn btn-outline-primary  p-2 mx-4" id="editButton"
+                            style="width: 200px ;" value="Edit" data-bs-target="#updateModel" data-bs-toggle="modal" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Update  modal-->
+
+    <div class="modal" id="updateModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header " style="border:none;">
+                    <h2 class="modal-title ms-4 " style="  width: 80%;text-align:center;" id="updateModalLabel">
+                        Update Details</h1>
+                        <button type="button" class="btn-close me-3" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-block ">
+                    <form class="signup" action="" method="">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <h5 for="updateName">User Name</label>
+                                        </th>
+                                        <td>
+                                            <input type="text" name="updatename" class="form-control" id="updateName"
+                                                placeholder="Enter the name" maxlength="20">
+                                            <div>
+                                                <label for="error" class="error" id="updateNameError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="updateMail">Email</h5>
+                                        </th>
+                                        <td>
+                                            <input type="email" name="name" class="form-control" id="updateMail"
+                                                placeholder="Enter the Email">
+                                            <div>
+                                                <label for="error" class="error" id="updateMailError"></label>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <h5 for="updateNumber">Mobile Number</h5>
+                                        </th>
+                                        <td>
+                                            <input type="tel" name="updateNumber" id="updateNumber" class="form-control"
+                                                placeholder="Enter the mobile number" maxlength="10">
+                                            <div>
+                                                <label for="error" class="error" id="updateMobileNumberError"></label>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <h5 for="updateAddress">Address</h5>
+                                        </th>
+                                        <td>
+                                            <textarea name="updateAddress" class="form-control" id="updateAddress"
+                                                placeholder="Enter the address" maxlength="150"></textarea>
+                                            <div>
+                                                <label for="error" class="error" id="updateAddressError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <h5 for="updateGender" class="gender me-2">Gender</h5>
+                                        </th>
+                                        <td>
+                                            <input type="radio" name="gender" id="male" value="male">
+                                            <label for="updateMale" class=" genter me-2 ">Male</label>
+                                            <input type="radio" name="gender" id="female" value="female">
+                                            <label for="updateFemale" class=" genter me-2 ">Female</label>
+                                            <div>
+                                                <label for="error" class="error" id="updateGenderError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <h5 for="updatemobilechoice">Mobile Choice</h5>
+                                        </th>
+                                        <td>
+                                            <input type="checkbox" name="UpdateChoice" id="Iphone" value="Iphone">
+                                            <label for="updateIphonechoice" class="checkbox me-2 ">Iphone</label>
+                                            <input type="checkbox" name="UpdateChoice" id="Android" value="Android">
+                                            <label for="updateAndroidchoice" class="checkbox me-2">Android</label>
+                                            <input type="checkbox" name="UpdateChoice" id="Google" value="Google">
+                                            <label for="updateGooglechoice" class="checkbox me-2 ">Google</label>
+                                            <div>
+                                                <label for="error" class="error" id="updateChoiceError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <h5 for="branch">Branch</h5>
+                                        </th>
+                                        <td>
+                                            <select name="branch" id="updateBranch" class="form-control">
+                                                <option value="branch" id="updateNone" selected disabled hidden>select
+                                                    option</option>
+                                                <option id="velachery" value="velachery">Velachery
+                                                </option>
+                                                <option id="egmore" value="egmore">Egmore</option>
+                                                <option id="tambaram" value="tambaram">Tambarm</option>
+                                            </select>
+                                            <div>
+                                                <label for="error" class="error" id="updateBranchError"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <input type="button" class="btn btn-outline-primary  p-2 mx-4" id="UpdateButton"
+                                style="width: 30%;" value="Update" onclick="updateDatails()" data-bs-target=""
+                                data-bs-toggle="">
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- change password modal -->
+
+    <div class="modal" id="changePasswordModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content " style="width: 600px;">
+                <div class="modal-header ">
+                    <h1 class="modal-title ms-4" style="  width: 80%;text-align: center;" id="changePasswordModalLabel">
+                        Change password</h1>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <h5 for="changeOldpassword" class="changepassword">Old Password</h5>
+                                        </th>
+                                        <td> <input type="password" class="passwordAccess form-control  p-2"
+                                                name="changepassword" id="changeOldpassword"
+                                                placeholder="Enter the old password" maxlength="13">
+                                            <div>
+                                                <label for="error" class="error" id="changeoldpasswordError"></label>
+                                            </div>
+
+                                        </td>
+                                        <td class="passwordIcon d-flex justify-content-center p-0">
+                                            <span id="changeOldpasswordIcon"
+                                                onclick="passwordIconButton('changeOldpassword')"> <img src="./image/eye.svg"
+                                                    alt="" height="auto" width="20px" style="margin-top: px;" /> </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="changenewpassword" class="changepassword">New Password</h5>
+                                        </th>
+                                        <td>
+                                            <input type="password" class="passwordAccess form-control  p-2"
+                                                name="changepassword" id="changenewpassword"
+                                                placeholder="Enter the new password" maxlength="13">
+                                            <div>
+                                                <label for="error" class="error" id="changenewpasswordError"></label>
+                                            </div>
+                                        </td>
+                                        <td class="passwordIcon d-flex justify-content-center p-0">
+                                            <span id="changenewpasswordIcon"
+                                                onclick="passwordIconButton('changenewpassword')"> <img src="./image/eye.svg"
+                                                    alt="" height="auto" width="20px" style="margin-top: px;" /> </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h5 for="changeRenewpassword" class="changepassword">Confirm Password</h5>
+                                        </th>
+                                        <td>
+                                            <input type="password" class="passwordAccess form-control  p-2"
+                                                name="newpassword" id="changeRenewpassword"
+                                                placeholder="Re-enter the new password" maxlength="13">
+                                            <div>
+                                                <label for="error" class="error" id="changeRepasswordError"></label>
+                                            </div>
+
+                                        </td>
+                                        <td class="passwordIcon d-flex justify-content-center p-0">
+                                            <span id="changeform_repasswordIcon"
+                                                onclick="changeform_repasswordIconButton()"> <img src="./image/eye.svg"
+                                                    alt="" height="auto" width="20px" style="margin-top: px;" /> </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <input type="button" class="btn btn-outline-primary p-2" style="width: 40%;"
+                                onclick="changePasswordButton()" value=" Update Password" />
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- iphone 15 modal -->
+
+    <div class="modal fade" id="iphone15" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="iphone15Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header " style="border: none;">
+                    <h2 class="modal-title ms-3" style="  width: 80%;text-align: center;" id="staticBackdropLabel">Apple
+                        iphone 15</h2>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body  ">
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th>SCREEN SIZE :</th>
+                                    <td>6.1-inch</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">CAMERA : </th>
+                                    <td>48MP + 12MP</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">RAM :</th>
+                                    <td>16GB</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">BATTERY :</th>
+                                    <td>3240mAh</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- iphone 11 modal -->
+
+    <div class="modal fade" id="iphone11" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="iphone11Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h2 class="modal-title ms-4 " style="  width: 80%;text-align: center;" id="iphone11Label">
+                        Apple iphone 11</h2>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="  align-items:center">
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th>SCREEN SIZE :</th>
+                                    <td>5.8-inch</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">CAMERA : </th>
+                                    <td>48MP + 12MP</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">RAM :</th>
+                                    <td>64GB/128GB</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">BATTERY :</th>
+                                    <td>2840mAh</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- iphone 13 modal -->
+
+    <div class="modal fade" id="iphone13" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="iphone13Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h2 class="modal-title ms-4" style="  width: 80%;text-align: center;" id="iphone13Label">
+                        Apple iphone 13</h2>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body " style="  align-items:center">
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th>SCREEN SIZE :</th>
+                                    <td>6.0-inch</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">CAMERA : </th>
+                                    <td>48MP +22Mp+ 12MP</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">RAM :</th>
+                                    <td>8GB/12GB</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">BATTERY :</th>
+                                    <td>3240mAh</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- redmi modal -->
+
+    <div class="modal fade" id="redmi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="redmiLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h2 class="modal-title  ms-4" style="  width: 80%;text-align: center;" id="redmiLabel">
+                        Redmi 13c</h2>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body " style=" align-items:center">
+
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th>SCREEN SIZE :</th>
+                                    <td>6.74 inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">CAMERA : </th>
+                                    <td>50MP + 8MP</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">RAM :</th>
+                                    <td>8GB</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">BATTERY :</th>
+                                    <td>5000mAh</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- samsung modal -->
+
+    <div class="modal fade" id="samsung" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="samsungLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h2 class="modal-title ms-4" style="  width: 80%;text-align: center;" id="samsungLabel">
+                        Samsung A54</h2>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="  align-items:center">
+
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th>SCREEN SIZE :</th>
+                                    <td>6.4 inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">CAMERA : </th>
+                                    <td>50MP + 32MP</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">RAM :</th>
+                                    <td>4GB/8GB</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">BATTERY :</th>
+                                    <td>5000mAh</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- onelus modal -->
+
+    <div class="modal fade" id="oneplus" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="oneplusLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h2 class="modal-title ms-4 " style="  width: 80%;text-align: center;" id="oneplusLabel">
+                        Oneplus 11
+                    </h2>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body " style="  align-items:center">
+
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th>SCREEN SIZE :</th>
+                                    <td>6.1 inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">CAMERA : </th>
+                                    <td>64MP + 32MP</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">RAM :</th>
+                                    <td>8GB</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">BATTERY :</th>
+                                    <td>5000mAh</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--google pixel 6 modal -->
+
+    <div class="modal fade" id="googlepixel6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="googlepixel6Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h2 class="modal-title ms-4 " style="  width: 80%;text-align: center;" id="googlepixel6Label">
+                        Google pixel 6</h2>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body " style=" align-items:center">
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th>SCREEN SIZE :</th>
+                                    <td>6.74 inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">CAMERA : </th>
+                                    <td>50MP + 10MP</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">RAM :</th>
+                                    <td>8GB/12GB</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">BATTERY :</th>
+                                    <td>5000mAh</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- google pixel 8 modal -->
+
+    <div class="modal fade" id="googlepixel8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="googlepixel8Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h2 class="modal-title ms-4 " style="  width: 80%;text-align: center;" id="googlepixel8Label">
+                        Google pixel 8</h2>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="  align-items:center">
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th>SCREEN SIZE :</th>
+                                    <td>6.2 inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">CAMERA : </th>
+                                    <td>50MP + 10MP</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">RAM :</th>
+                                    <td>8GB</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">BATTERY :</th>
+                                    <td>4575mAh</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- google pixel 7 modal -->
+
+    <div class="modal fade" id="googlepixel7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="googlepixel7Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h2 class="modal-title ms-4" style="  width: 80%;text-align: center;" id="googlepixel7Label">
+                        Google Pixel 7</h2>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body " style="  align-items:center">
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th>SCREEN SIZE :</th>
+                                    <td>6.0 inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">CAMERA : </th>
+                                    <td>50MP + 8MP</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">RAM :</th>
+                                    <td>8GB</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">BATTERY :</th>
+                                    <td>5000mAh</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- helpline modal-->
+
+    <div class="modal fade" id="helplineModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="helplineModalabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h2 class="modal-title ms-3" style="  width: 80%;text-align: center;" id="helplineModalabel">
+                      Help& Support </h4>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body " style="  align-items:center">
+                    <div class="helpline">
+                        <div class="d-flex justify-content-between">
+                       <h4 class="mt-2"> Get  quick customer support by selecting your items</h3>
+                        <img src="./image/dropdown/help.png" alt="" class="me-3" width="60px" height="50px">
+                    </div>
+                    <br>
+                        <h5 class="mb-3"> what issue your facing?</h5>
+                        <div class="d-flex justify-content-between">
+                            <p>I want to manage my order <br>view,cancel or return an order</p>  <span class="me-3"> <img src="/image/dropdown/caret-right-fill.svg" alt="" width="40px" ></span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>I want help with return/refund  <br> manage and track return</p> <span class="me-3"> <img src="/image/dropdown/caret-right-fill.svg" width="40px" alt=""></span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>I want help with other issues <br> offers,payment</p> <span class="me-3"> <img src="/image/dropdown/caret-right-fill.svg" width="40px" alt=""></span>
+                        </div>
+                        <div class="d-flex justify-content-between"> 
+                            <p>I want to contact the management</p> <span class="me-3"> <img src="/image/dropdown/caret-right-fill.svg" width="40px" alt=""></span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Browser help topics </p> <span class="me-3"> <img src="/image/dropdown/caret-right-fill.svg" width="40px" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- add cart modal -->
+    <div class="modal fade" id="addcartModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="addcartModalabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"  style="max-width: 70%;">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h2 class="modal-title d-flex justify-content-center" style="  width: 80%;text-align: center; margin-left:10%" id="addcartModalabel">
+                        Shopping Cart</h2>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body " style=" align-items:center">
+                    <div class="table-responsive " id="additem_list">
+                        <table class="table table-borderless ">
+                            <tbody id="additems_add_table">
+                                <tr class="my-2" id="addcart_table">
+                                    <th>Serial.no</th>
+                                    <th>Mobile</th>
+                                    <th>Price<br>(Per Item)</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th>Action</th>
+                                </tr>
+                               
+
+                            </tbody>
+                        </table>
+                        <div class=" d-flex justify-content-between mx-3 ">
+                            <div style="margin-left: 6%;">
+                                <input type="checkbox"  name="" id="discount" onclick="discount_button()"><label for="discount" class="ms-1"> Discount for 20%</label>
+                            </div>
+                         <div class="" style="margin-right: 16%;">
+                            <span >Total price</span>
+                            <label>Rs <span id="total_of_amount_in_mobiles"></span></label>
+                         </div>
+                                                                  
+                           
+                        </div>
+                    </div>
+                    <div  class="" id="empty_add_cart_item_Show" style="display:block; margin-left: 30%;"> 
+                       
+                        <h4 class="mt-3 ms-5"><img src="./image/dropdown/cart-x-fill.svg" alt="" width="50px" style="margin-right:10px;"> Cart is empty </h4> 
+                    </div>
+                </div>
+                <div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center" style="border: none;">
+                    <div id="Checkout_button">
+                        <input type="button" class="btn btn-outline-primary  p-2 mx-4" 
+                            style="width: 200px ;" value="Checkout" onclick="checkout_button()" />
+
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- addcart alert modal-->
+<div class="modal fade" id="alartLoginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="alartLoginModallabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h2 class="modal-title ms-4" style="  width: 80%;text-align: center;" id="alartLoginModallabel">
+                        </h2>
+                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center my-4" style="  align-items:center">
+
+                     <div class="">
+                        <img src="./image/dropdown/exclamation-triangle.svg"  width=" 60px;" alt="">
+                     </div>
+                     <div>
+                        <span>Please login your details for accessing can't items </span>
+                     </div>
+                    </div>
+             <div class="modal-footer d-flex justify-content-start ms-3" style="border: none;">
+                <div>
+                    <span>Do you want to</span>
+                    <a href=""  data-bs-toggle="modal" data-bs-target="#loginmodal" style="text-decoration: none;">Login?</a>
+
+                </div>
+
+              </div>
+              </div>
+        </div>
+    </div>
+
+
+<!-- checkout feature --> 
+  <!-- Modal -->
+  <div class="modal fade" id="checkoutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered" style="max-width: 50%;">
+      <div class="modal-content">
+        <div class="modal-header">  
+          <h1 class="modal-title  ms-5" style="  width: 80%;text-align: center;" id="checkoutModallabel">
+            Order Summary</h1>
+          <button type="button" class="btn-close me-3" data-bs-dismiss="modal" onclick="closebutton_checkout()" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            
+                <div class="table-responsive ">
+                    <table class="table table-borderless ">
+                        <tbody id="add_item">
+                            <tr class="my-2" >
+                                <th>Mobile Name</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                           
+
+                        </tbody>
+                    </table>         
+            <div class="mt-3 me-3">
+               <div class="text-end">
+                      <span style="text-align:end;">Total price</span>
+                      <label>Rs. <span id="final_amount"></span></label>
+                   </div>   
+                </div>  
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Past cart modal -->
+  <div class="modal fade" id="pastcart_Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="pastcart_ModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered" style="max-width: 50%;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title  ms-5" style="  width: 80%;text-align: center;" id="pastcart_Modallabel">
+            Past Order</h1>
+          <button type="button" class="btn-close me-3" data-bs-dismiss="modal"  aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="table-responsive ">
+                <table class="table table-borderless ">
+                    <tbody class="past_order">
+                        <tr class="my-2" >
+                            <th>Mobile Name</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                       
+
+                    </tbody>
+                </table>        
+            <div class="mt-3 me-3">
+        
+                   <div class="text-end">
+                      <span style="text-align:end;">Total price</span>
+                      <label>Rs. <span id="past_count_total"></span></label>
+                   </div>    
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+    <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
